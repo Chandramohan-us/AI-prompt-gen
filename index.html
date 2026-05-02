@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Vision Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-8 text-center text-blue-400">Gemini Vision Studio</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Left Side: Upload & Analyze -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h2 class="text-xl mb-4">Step 1: Upload Image</h2>
+                <input type="file" id="imageInput" accept="image/*" class="mb-4 block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700 cursor-pointer">
+                <img id="preview" class="hidden w-full h-48 object-cover rounded-lg mb-4">
+                <button id="analyzeBtn" class="w-full bg-blue-600 py-2 rounded-lg font-bold hover:bg-blue-700 transition">Get Prompt</button>
+            </div>
+
+            <!-- Right Side: Prompt & Generate -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+                <h2 class="text-xl mb-4">Step 2: Generate New Image</h2>
+                <textarea id="promptBox" rows="4" class="w-full bg-gray-700 text-white p-3 rounded-lg border border-gray-600 focus:border-blue-500 outline-none" placeholder="AI prompt will appear here..."></textarea>
+                <button id="generateBtn" class="w-full mt-4 bg-purple-600 py-2 rounded-lg font-bold hover:bg-purple-700 transition">Create New Image</button>
+            </div>
+        </div>
+
+        <!-- Result Section -->
+        <div class="mt-12 text-center">
+            <h2 class="text-2xl mb-4">Generated Result</h2>
+            <div id="loading" class="hidden py-4 text-blue-400">Processing... Please wait...</div>
+            <img id="resultImage" class="hidden mx-auto max-w-full rounded-xl shadow-2xl border-4 border-gray-700">
+        </div>
+    </div>
+
+    <!-- Security Note: In a real app, use a proxy. For this demo, we'll use a prompt for the key. -->
+    <script src="script.js"></script>
+</body>
+</html>
