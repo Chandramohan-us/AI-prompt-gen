@@ -1,4 +1,4 @@
-const API_KEY = prompt("AIzaSyAh1Wr-N-1v2PkVVp1uR11m8z3gMRx1qeE:");
+const API_KEY = "AIzaSyAh1Wr-N-1v2PkVVp1uR11m8z3gMRx1qeE";
 const analyzeBtn = document.getElementById('analyzeBtn');
 const generateBtn = document.getElementById('generateBtn');
 const imageInput = document.getElementById('imageInput');
