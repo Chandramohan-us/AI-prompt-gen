@@ -1,4 +1,4 @@
-const API_KEY = prompt("AIzaSyAh1Wr-N-1v2PkVVp1uR11m8z3gMRx1qeE");
+const API_KEY = prompt("AIzaSyAh1Wr-N-1v2PkVVp1uR11m8z3gMRx1qeE:");
 
 // UI Elements
 const imageInput = document.getElementById('imageInput');
